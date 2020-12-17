@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="./js/jQuery.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark p-3">
+        <a class="navbar-brand text-white">Consultar CEP</a>
+        <div class="form-inline my-2 my-lg-0">
+            <input id="cep" class="form-inline mr-sm-2" type="search" placeholder="CEP">
+            <button id="consultar" class="btn btn-outline-success my-2 my-sm-0" onclick="consultar()">Consultar</button>
+        </div>
+    </nav>
+    <div class="container animacao">
+        <div class="row">
+            <div id="preloader">
+                <div class="inner">
+                    <div class="bolas">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 tabela-cep">
+        <div class="row">
+            <table class="table table-dark table-hover ">
+                <thead>
+                    <td colspan="5" class="text-center">
+                        <h2>O Endereço do CEP <span id="endereco"></span> é:</h2>
+                    </td>
+                </thead>
+                <tr>
+                    <td scope="row">Rua:</td>
+                    <td id="rua" class="col-xs-11 col-sm-11 col-md-11 col-lg-11"></td>
+                </tr>
+                <tr>
+                    <td scope="row"> Bairro:</td>
+                    <td id="bairro"></td>
+                </tr>
+                <tr>
+                    <td scope="row">Cidade:</td>
+                    <td id="localidade"></td>
+                </tr>
+                <tr>
+                    <td scope="row">UF:</td>
+                    <td id="uf"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <script src="./js/javaScript.js"></script>
+</body>
+
+</html>
